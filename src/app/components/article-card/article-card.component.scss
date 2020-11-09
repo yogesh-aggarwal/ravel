@@ -8,6 +8,12 @@
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 0 5px #ccc;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    border: 5px solid #eee;
+  }
 
   .thumbnail {
     @include center();
