@@ -25,7 +25,12 @@ export class ArticleService {
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
       tags: ["web", "indexeddb"],
       title: "How to Use IndexedDB in an efficient way",
-      author: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+      author: {
+        id: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+        name: "Yogesh Aggarwal",
+        profileImg: "https://bit.ly/3eHkUQm",
+      },
+      authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
     },
     XgpLPw8DzRO4zFYFmgjt: {
       id: "XgpLPw8DzRO4zFYFmgjt",
@@ -37,7 +42,12 @@ export class ArticleService {
       downvoters: [],
       thumbnail: "https://bit.ly/3pf9M1Z",
       tags: ["web", "indexeddb"],
-      author: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+      author: {
+        id: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+        name: "Yogesh Aggarwal",
+        profileImg: "https://bit.ly/3eHkUQm",
+      },
+      authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
       content: "<p>Hello IndexedDB</p>",
       dateEdited: [new Date()],
     },
@@ -51,7 +61,12 @@ export class ArticleService {
       downvoters: [],
       thumbnail: "https://bit.ly/3pf9M1Z",
       tags: ["web", "indexeddb"],
-      author: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+      author: {
+        id: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+        name: "Yogesh Aggarwal",
+        profileImg: "https://bit.ly/3eHkUQm",
+      },
+      authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
       content: "<p>Hello IndexedDB</p>",
       dateEdited: [new Date()],
     },
@@ -65,7 +80,12 @@ export class ArticleService {
       downvoters: [],
       thumbnail: "https://bit.ly/3pf9M1Z",
       tags: ["web", "indexeddb"],
-      author: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+      author: {
+        id: "WRPezSWZSJM52RPr8qluBMCBBdC3",
+        name: "Yogesh Aggarwal",
+        profileImg: "https://bit.ly/3eHkUQm",
+      },
+      authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
       content: "<h4>Hello IndexedDB</h4>",
       dateEdited: [new Date()],
     },
@@ -80,14 +100,23 @@ export class ArticleService {
 
   constructor(private firestore: AngularFirestore) {}
 
-  private parseArticle(article: any) {
+  private async parseArticle(article: any) {
     let articles: { [key: string]: ArticleInterface } = this.articles.value;
     if (Object.keys(articles).includes(article.id)) return;
+
+    let author = await this.firestore
+      .collection("authors")
+      .doc(article.author)
+      .get()
+      .pipe(take(1))
+      .toPromise();
 
     articles[article.id] = {
       id: article.id,
       ...article.data(),
+      author: author,
     };
+    console.log(articles);
     this.articles.next(articles);
   }
 

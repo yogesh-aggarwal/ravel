@@ -4,9 +4,9 @@
       <img [src]="article.thumbnail" alt="" />
     </div>
     <div class="content">
-      <div class="author">
-        <img src="" alt="" />
-        <div class="name">{{ article.author }}</div>
+      <div class="author" [routerLink]="['user', article.authorId]">
+        <img [src]="article.author.profileImg" alt="" />
+        <div class="name">{{ article.author.name }}</div>
       </div>
       <div class="title">{{ article.title }}</div>
       <div class="short-desc">{{ article.shortDesc }}</div>

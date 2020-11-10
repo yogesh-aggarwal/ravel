@@ -30,10 +30,18 @@
     .author {
       @include center();
       justify-content: flex-start;
-      margin: 1.2rem 0;
+      outline: none;
+      cursor: pointer;
+      margin: 1rem 0;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 5rem;
+      }
 
       .name {
-        margin-left: 1rem;
+        margin-left: 0.5rem;
       }
     }
 

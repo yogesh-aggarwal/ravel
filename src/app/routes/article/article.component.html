@@ -8,9 +8,9 @@
       {{ article.shortDesc }}
     </div>
     <div class="info">
-      <div class="author">
-        <img [src]="article.author" alt="" />
-        <div class="name">{{ article.author }}</div>
+      <div class="author" [routerLink]="['user', article.authorId]">
+        <img [src]="article.author.profileImg" alt="" />
+        <div class="name">{{ article.author.name }}</div>
       </div>
       <div class="date-published">
         <i class="las la-calendar"></i>

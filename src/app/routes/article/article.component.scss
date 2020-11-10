@@ -26,9 +26,22 @@
         @include center();
         justify-content: flex-start;
         margin: 2rem 0;
+        outline: none;
+        cursor: pointer;
+
+        img {
+          width: 4rem;
+          height: 4rem;
+          border-radius: 5rem;
+          padding: 0.5rem;
+
+          &:hover {
+            background: #eee;
+          }
+        }
 
         .name {
-          margin-left: 1rem;
+          margin-left: 0.5rem;
         }
       }
 

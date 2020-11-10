@@ -1,6 +1,13 @@
+export interface AuthorInterface {
+  id: string;
+  name: string;
+  profileImg: string;
+}
+
 export interface ArticleInterface {
   id: string;
-  author: string;
+  authorId: string;
+  author?: AuthorInterface;
   title: string;
   shortDesc: string;
   tags: string[];
