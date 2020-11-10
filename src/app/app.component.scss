@@ -1,11 +1,21 @@
+$nav-height: 4.5rem;
+
 nav {
   position: fixed;
-  top: 0;
+  top: -$nav-height;
   left: 0;
   width: 100%;
   box-shadow: 0 2px 10px #00000015;
+
+  &.open {
+    top: 0;
+  }
 }
 
 main {
-  margin-top: 4.5rem;
+  margin-top: 0;
+
+  &.navOpen {
+    margin-top: $nav-height;
+  }
 }

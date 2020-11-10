@@ -10,16 +10,16 @@
     </div>
   </div>
   <div class="right">
-    <div class="user" [routerLink]="['user', user.id]">
-      <ng-container *ngIf="user; else login">
+    <ng-container *ngIf="user; else login">
+      <div class="user" [routerLink]="['user', user.id]">
         <img [src]="user.profileImg" alt="" />
         <div class="name">
           {{ user.name }}
         </div>
-      </ng-container>
-      <ng-template #login>
-        <button (click)="userService.signIn()">Login</button>
-      </ng-template>
-    </div>
+      </div>
+    </ng-container>
+    <ng-template #login>
+      <button (click)="userService.signIn()">Login</button>
+    </ng-template>
   </div>
 </div>

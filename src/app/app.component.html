@@ -1,7 +1,8 @@
-<nav>
+<nav [ngClass]="{ open: isNavbarOpen }">
   <navbar></navbar>
 </nav>
 
-<main>
+<main [ngClass]="{ navOpen: isNavbarOpen }">
   <router-outlet></router-outlet>
 </main>
+{{ isNavbarOpen }}
