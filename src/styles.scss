@@ -2,11 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap");
 
 @import "./theme";
+@import "./tools";
 
 * {
   box-sizing: border-box;
   font-family: "Poppins", Verdana, "Roboto Slab", sans-serif;
   color: $text-primary;
+  outline: none;
   transition: all 0.2s ease-out;
 }
 
@@ -23,6 +25,24 @@ img {
   -webkit-user-drag: none;
 }
 
-a {
-  outline: none;
+button {
+  @include center();
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: $primary;
+
+  * {
+    color: $background;
+  }
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    background: darken($primary, 15);
+  }
 }

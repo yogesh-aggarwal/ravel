@@ -12,7 +12,10 @@
   <div class="right">
     <ng-container *ngIf="user; else login">
       <div class="write">
-        <button routerLink="write">Write</button>
+        <button routerLink="write">
+          <i class="las la-feather-alt"></i>
+          <div class="text">Write</div>
+        </button>
       </div>
       <div class="user" [routerLink]="['user', user.id]">
         <img [src]="user.profileImg" alt="" />
@@ -22,7 +25,10 @@
       </div>
     </ng-container>
     <ng-template #login>
-      <button (click)="userService.signIn()">Login</button>
+      <button (click)="userService.signIn()">
+        <i class="las la-sign-in-alt"></i>
+        <div class="text">Login</div>
+      </button>
     </ng-template>
   </div>
 </div>
