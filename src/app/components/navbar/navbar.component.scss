@@ -29,6 +29,7 @@
     @include center();
 
     .search {
+      @include center();
       width: 90%;
       padding: 0.6rem 1rem;
       background: #f0f0f0;
