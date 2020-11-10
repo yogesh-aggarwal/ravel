@@ -9,9 +9,8 @@
   .logo {
     display: flex;
     align-items: center;
-    
+
     img {
-      display: none;
       width: 4rem;
       margin-right: 0.5rem;
     }
@@ -19,6 +18,8 @@
     .name {
       font-size: 1.5rem;
       font-weight: 600;
+      outline: none;
+      cursor: pointer;
     }
   }
 }

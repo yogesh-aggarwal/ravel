@@ -1,1 +1,25 @@
-{{ id }}
+<div class="container">
+  <div class="left"></div>
+  <div class="article">
+    <div class="title">
+      {{ article.title }}
+    </div>
+    <div class="short-desc">
+      {{ article.shortDesc }}
+    </div>
+    <div class="info">
+      <div class="author">
+        <img [src]="article.author" alt="" />
+        <div class="name">{{ article.author }}</div>
+      </div>
+      <div class="date-published">
+        <i class="las la-calendar"></i>
+        <div class="date">
+          {{ article.datePublished | date: "dd MMMM yyyy" }}
+        </div>
+      </div>
+    </div>
+    <div class="content" [innerHTML]="article.content"></div>
+  </div>
+  <div class="right"></div>
+</div>

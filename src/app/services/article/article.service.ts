@@ -42,7 +42,7 @@ export class ArticleService {
       dateEdited: [new Date()],
     },
     XgpLPw8DzRO4zFYFmgjt2: {
-      id: "XgpLPw8DzRO4zFYFmgjt",
+      id: "XgpLPw8DzRO4zFYFmgjt2",
       shortDesc:
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
       datePublished: new Date(),
@@ -56,7 +56,7 @@ export class ArticleService {
       dateEdited: [new Date()],
     },
     XgpLPw8DzRO4zFYFmgjt3: {
-      id: "XgpLPw8DzRO4zFYFmgjt",
+      id: "XgpLPw8DzRO4zFYFmgjt3",
       shortDesc:
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
       datePublished: new Date(),
@@ -66,7 +66,7 @@ export class ArticleService {
       thumbnail: "https://bit.ly/3pf9M1Z",
       tags: ["web", "indexeddb"],
       author: "WRPezSWZSJM52RPr8qluBMCBBdC3",
-      content: "<p>Hello IndexedDB</p>",
+      content: "<h4>Hello IndexedDB</h4>",
       dateEdited: [new Date()],
     },
   });

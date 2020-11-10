@@ -12,7 +12,7 @@
   cursor: pointer;
 
   &:focus {
-    border: 5px solid #eee;
+    background: #eee;
   }
 
   .thumbnail {
@@ -31,6 +31,10 @@
       @include center();
       justify-content: flex-start;
       margin: 1.2rem 0;
+
+      .name {
+        margin-left: 1rem;
+      }
     }
 
     .title {
