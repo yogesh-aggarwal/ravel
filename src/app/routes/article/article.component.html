@@ -8,7 +8,7 @@
       {{ article.shortDesc }}
     </div>
     <div class="info">
-      <div class="author" [routerLink]="['user', article.authorId]">
+      <div class="author" [routerLink]="['/user', article.authorId]">
         <img [src]="article.author.profileImg" alt="" />
         <div class="name">{{ article.author.name }}</div>
       </div>

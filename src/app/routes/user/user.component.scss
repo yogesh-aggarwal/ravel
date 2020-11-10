@@ -1,4 +1,5 @@
 @import "../../../tools";
+@import "../../../theme";
 
 .container {
   .back {
@@ -64,6 +65,41 @@
             margin-bottom: 0.5rem;
           }
         }
+      }
+    }
+
+    .creations {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: minmax(15rem, 10vw) auto;
+      grid-gap: 2.5rem;
+
+      .sidebar {
+        .section {
+          @include center();
+          justify-content: flex-start;
+          padding: 1rem 2rem;
+          border-radius: 0.5rem;
+          cursor: pointer;
+
+          &.active,
+          &:focus,
+          &:hover {
+            background: rgba($primary, 0.15);
+          }
+
+          i {
+            font-size: 1.3rem;
+          }
+
+          .name {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+
+      main {
+        padding-right: 2.5rem;
       }
     }
   }
