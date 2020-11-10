@@ -11,7 +11,8 @@
   outline: none;
   cursor: pointer;
 
-  &:focus {
+  &:focus,
+  &:hover {
     background: #eee;
   }
 
