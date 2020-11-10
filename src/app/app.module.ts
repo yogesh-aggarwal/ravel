@@ -19,6 +19,7 @@ import { ProfileComponent } from './routes/user/profile/profile.component';
 import { CollectionsComponent } from './routes/user/collections/collections.component';
 import { ExclusivesComponent } from './routes/user/exclusives/exclusives.component';
 import { AboutComponent } from './routes/user/about/about.component';
+import { CollaboratorsComponent } from './routes/user/collaborators/collaborators.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AboutComponent } from './routes/user/about/about.component';
     CollectionsComponent,
     ExclusivesComponent,
     AboutComponent,
+    CollaboratorsComponent,
   ],
   imports: [
     BrowserModule,

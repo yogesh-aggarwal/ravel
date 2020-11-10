@@ -50,6 +50,14 @@
           </div>
           <div
             class="section"
+            [ngClass]="{ active: currentSection === 'collaborators' }"
+            (click)="navigate('collaborators')"
+          >
+            <i class="las la-users"></i>
+            <div class="name">Collaborators</div>
+          </div>
+          <div
+            class="section"
             [ngClass]="{ active: currentSection === 'about' }"
             (click)="navigate('about')"
           >
