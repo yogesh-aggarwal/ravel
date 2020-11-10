@@ -43,4 +43,25 @@
       }
     }
   }
+
+  .right {
+    @include center();
+    justify-content: flex-end;
+
+    .user {
+      @include center();
+      outline: none;
+      cursor: pointer;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .name {
+        margin-left: 0.5rem;
+        font-weight: 600;
+      }
+    }
+  }
 }

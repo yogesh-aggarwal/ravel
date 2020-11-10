@@ -9,12 +9,17 @@
       <input type="text" placeholder="Search" />
     </div>
   </div>
-  <div class="user">
-    <ng-container *ngIf="user; else login">
-      {{ user.name }}
-    </ng-container>
-    <ng-template #login>
-      <button (click)="userService.signIn()">Login</button>
-    </ng-template>
+  <div class="right">
+    <div class="user" [routerLink]="['user', user.id]">
+      <ng-container *ngIf="user; else login">
+        <img [src]="user.profileImg" alt="" />
+        <div class="name">
+          {{ user.name }}
+        </div>
+      </ng-container>
+      <ng-template #login>
+        <button (click)="userService.signIn()">Login</button>
+      </ng-template>
+    </div>
   </div>
 </div>
