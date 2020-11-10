@@ -3,6 +3,7 @@
 .container {
   @include center();
   align-items: flex-start;
+  padding-top: 1rem;
 
   display: grid;
   grid-template-columns: 20vw 60vw 20vw;
