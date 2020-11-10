@@ -32,17 +32,37 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   background: $primary;
+  color: $background;
+
+  &:hover {
+    background: darken($primary, 15);
+  }
 
   * {
     color: $background;
   }
 
+  &.secondary {
+    background: $background;
+    border: 3px solid $primary;
+    color: $text-primary;
+
+    * {
+      color: $text-primary;
+    }
+
+    &:hover {
+      background: $primary;
+      color: $background;
+
+      * {
+        color: $background;
+      }
+    }
+  }
+
   i {
     margin-right: 0.5rem;
     font-size: 1.2rem;
-  }
-
-  &:hover {
-    background: darken($primary, 15);
   }
 }

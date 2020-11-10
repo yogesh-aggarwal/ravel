@@ -19,7 +19,7 @@ export class ArticleService {
       downvoters: [],
       thumbnail: "https://bit.ly/3pf9M1Z",
       datePublished: new Date(),
-      content: "<p>Hello IndexedDB</p>",
+      content: {},
       dateEdited: [new Date()],
       shortDesc:
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
@@ -48,7 +48,7 @@ export class ArticleService {
         profileImg: "https://bit.ly/3eHkUQm",
       },
       authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
-      content: "<p>Hello IndexedDB</p>",
+      content: {},
       dateEdited: [new Date()],
     },
     XgpLPw8DzRO4zFYFmgjt2: {
@@ -67,7 +67,7 @@ export class ArticleService {
         profileImg: "https://bit.ly/3eHkUQm",
       },
       authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
-      content: "<p>Hello IndexedDB</p>",
+      content: {},
       dateEdited: [new Date()],
     },
     XgpLPw8DzRO4zFYFmgjt3: {
@@ -86,7 +86,7 @@ export class ArticleService {
         profileImg: "https://bit.ly/3eHkUQm",
       },
       authorId: "WRPezSWZSJM52RPr8qluBMCBBdC3",
-      content: "<h4>Hello IndexedDB</h4>",
+      content: {},
       dateEdited: [new Date()],
     },
   });

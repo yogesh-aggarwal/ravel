@@ -1,6 +1,23 @@
 <div class="container">
+  <div class="actions-wrapper">
+    <div class="actions">
+      <div class="date">
+        {{ currentDate | date: "dd MMMM yyyy" }}
+      </div>
+      <button (click)="publish()">
+        <i class="las la-blog"></i>
+        <div class="text">Publish</div>
+      </button>
+    </div>
+  </div>
   <div class="title">
     <input type="text" placeholder="Give Your Article A Title" />
+  </div>
+  <div class="short-desc">
+    <textarea
+      maxlength="150"
+      placeholder="Provide a short desc to attract people"
+    ></textarea>
   </div>
   <div id="editorjs"></div>
 </div>

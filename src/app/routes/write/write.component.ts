@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import EditorJS from "@editorjs/editorjs";
+import EditorJS, { OutputData } from "@editorjs/editorjs";
 import * as Plugins from "./plugins";
+import { Md5 } from "ts-md5/dist/md5";
+import { ArticleInterface } from "src/app/services/article/interfaces";
+import { UserService } from "src/app/services/user/user.service";
 
 @Component({
   selector: "app-write",
@@ -8,6 +11,7 @@ import * as Plugins from "./plugins";
   styleUrls: ["./write.component.scss"],
 })
 export class WriteComponent implements OnInit {
+  currentDate = new Date();
   editor = new EditorJS({
     holder: "editorjs",
     defaultBlock: "paragraph",
@@ -108,4 +112,25 @@ export class WriteComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  async publish() {
+    let data: OutputData = await this.editor.save();
+    const md5: Md5 = new Md5();
+    const id: string = md5.appendStr(Date.now().toString()).end().toString();
+
+    const article: ArticleInterface = {
+      id: id,
+      authorId: UserService.user.value.id,
+      title: "",
+      shortDesc: "",
+      tags: [],
+      content: data,
+      thumbnail: "",
+      upvoters: [],
+      downvoters: [],
+      datePublished: new Date(),
+      dateEdited: [new Date()],
+    };
+    console.log(article);
+  }
 }

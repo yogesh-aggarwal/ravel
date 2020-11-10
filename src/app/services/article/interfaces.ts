@@ -11,7 +11,7 @@ export interface ArticleInterface {
   title: string;
   shortDesc: string;
   tags: string[];
-  content: string;
+  content: object;
   thumbnail: string;
   upvoters: string[];
   downvoters: string[];

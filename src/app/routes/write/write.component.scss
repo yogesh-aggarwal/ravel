@@ -3,6 +3,21 @@
 .container {
   padding-top: 2rem;
 
+  .actions-wrapper {
+    @include center();
+    margin-bottom: 2rem;
+
+    .actions {
+      @include center();
+      justify-content: space-between;
+      width: 35%;
+
+      .date {
+        font-weight: 600;
+      }
+    }
+  }
+
   .title {
     @include center();
 
@@ -10,6 +25,21 @@
       border: none;
       border-bottom: 2px solid #eee;
       font-size: 2.5rem;
+      background: none;
+      width: 35%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .short-desc {
+    @include center();
+
+    textarea {
+      resize: none;
+      border: none;
+      border-bottom: 2px solid #eee;
+      height: 5rem;
+      font-size: 1rem;
       background: none;
       width: 35%;
       margin-bottom: 2rem;
