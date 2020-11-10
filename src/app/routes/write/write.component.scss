@@ -5,12 +5,14 @@
 
   .actions-wrapper {
     @include center();
+    flex-direction: column;
+
     margin-bottom: 2rem;
 
     .actions {
       @include center();
       justify-content: space-between;
-      width: 35%;
+      width: 40%;
 
       .date {
         font-weight: 600;
@@ -25,8 +27,9 @@
       border: none;
       border-bottom: 2px solid #eee;
       font-size: 2.5rem;
+      font-weight: 600;
       background: none;
-      width: 35%;
+      width: 40%;
       margin-bottom: 2rem;
     }
   }
@@ -38,10 +41,10 @@
       resize: none;
       border: none;
       border-bottom: 2px solid #eee;
-      height: 5rem;
+      height: 6rem;
       font-size: 1rem;
       background: none;
-      width: 35%;
+      width: 40%;
       margin-bottom: 2rem;
     }
   }

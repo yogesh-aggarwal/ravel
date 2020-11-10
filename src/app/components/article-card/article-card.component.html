@@ -2,7 +2,7 @@
   <div
     class="card"
     [ngClass]="{ full: variant === 'full', short: variant === 'short' }"
-    [routerLink]="['article', article.id]"
+    [routerLink]="['/article', article.id]"
   >
     <div class="thumbnail">
       <img [src]="article.thumbnail" alt="" />
