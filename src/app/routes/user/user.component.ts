@@ -1,6 +1,6 @@
 import { Location } from "@angular/common";
 import { Component, OnDestroy, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { NavbarService } from "src/app/services/navbar/navbar.service";
 import { UserInterface } from "src/app/services/user/interface";
 import { UserService } from "src/app/services/user/user.service";
@@ -13,16 +13,17 @@ import { UserService } from "src/app/services/user/user.service";
 export class UserComponent implements OnInit, OnDestroy {
   id: string;
   user: UserInterface;
+  currentSection: string;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private navbarService: NavbarService,
     private userService: UserService,
     private location: Location
   ) {}
 
   ngOnInit(): void {
-    // this.navbarService.isOpen.next(false);
     this.id = this.route.snapshot.params["id"];
 
     this.userService.getUser(this.id);
@@ -30,6 +31,18 @@ export class UserComponent implements OnInit, OnDestroy {
       if (!users[this.id]) return;
       this.user = users[this.id];
     });
+
+    let url: string = this.router.url;
+
+    if (url.endsWith("collections")) {
+      this.currentSection = "collections";
+    } else if (url.endsWith("exclusives")) {
+      this.currentSection = "exclusives";
+    } else if (url.endsWith("about")) {
+      this.currentSection = "about";
+    } else {
+      this.currentSection = "";
+    }
   }
 
   ngOnDestroy(): void {
@@ -38,5 +51,10 @@ export class UserComponent implements OnInit, OnDestroy {
 
   back() {
     this.location.back();
+  }
+
+  navigate(route: string) {
+    this.currentSection = route;
+    this.router.navigate(["user", this.user.id, route]);
   }
 }

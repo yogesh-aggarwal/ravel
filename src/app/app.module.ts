@@ -15,6 +15,10 @@ import { ArticleCardComponent } from "./components/article-card/article-card.com
 import { ArticleComponent } from "./routes/article/article.component";
 import { CodeComponent } from "./components/blog/code/code.component";
 import { ContentComponent } from "./components/blog/content/content.component";
+import { ProfileComponent } from './routes/user/profile/profile.component';
+import { CollectionsComponent } from './routes/user/collections/collections.component';
+import { ExclusivesComponent } from './routes/user/exclusives/exclusives.component';
+import { AboutComponent } from './routes/user/about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { ContentComponent } from "./components/blog/content/content.component";
     TrendingComponent,
     PostsComponent,
     ArticleCardComponent,
+    ProfileComponent,
+    CollectionsComponent,
+    ExclusivesComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
