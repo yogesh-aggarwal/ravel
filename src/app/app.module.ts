@@ -21,6 +21,7 @@ import { ExclusivesComponent } from './routes/user/exclusives/exclusives.compone
 import { AboutComponent } from './routes/user/about/about.component';
 import { CollaboratorsComponent } from './routes/user/collaborators/collaborators.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { WriteComponent } from './routes/write/write.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     AboutComponent,
     CollaboratorsComponent,
     LoadingComponent,
+    WriteComponent,
   ],
   imports: [
     BrowserModule,

@@ -52,6 +52,7 @@
     .user {
       @include center();
       outline: none;
+      margin-left: 1.5rem;
       cursor: pointer;
 
       img {

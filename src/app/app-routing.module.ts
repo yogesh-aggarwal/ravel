@@ -8,6 +8,7 @@ import { CollectionsComponent } from "./routes/user/collections/collections.comp
 import { ExclusivesComponent } from "./routes/user/exclusives/exclusives.component";
 import { ProfileComponent } from "./routes/user/profile/profile.component";
 import { UserComponent } from "./routes/user/user.component";
+import { WriteComponent } from "./routes/write/write.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: "collaborators", component: CollaboratorsComponent },
     ],
   },
+  { path: "write", component: WriteComponent },
 ];
 
 @NgModule({

@@ -11,6 +11,9 @@
   </div>
   <div class="right">
     <ng-container *ngIf="user; else login">
+      <div class="write">
+        <button routerLink="write">Write</button>
+      </div>
       <div class="user" [routerLink]="['user', user.id]">
         <img [src]="user.profileImg" alt="" />
         <div class="name">
