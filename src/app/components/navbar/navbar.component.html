@@ -3,7 +3,12 @@
     <!-- <img src="../../../assets/icon.svg" alt="" /> -->
     <div class="name" routerLink="">Ravel</div>
   </div>
-  <div class="tools">Tools</div>
+  <div class="tools">
+    <div class="search">
+      <i class="las la-search"></i>
+      <input type="text" placeholder="Search" />
+    </div>
+  </div>
   <div class="user">
     <ng-container *ngIf="user; else login">
       {{ user.name }}
