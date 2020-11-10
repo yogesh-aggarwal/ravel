@@ -10,6 +10,8 @@ import * as Plugins from "./plugins";
 export class WriteComponent implements OnInit {
   editor = new EditorJS({
     holder: "editorjs",
+    defaultBlock: "paragraph",
+    autofocus: true,
     tools: {
       header: {
         class: Plugins.Header,

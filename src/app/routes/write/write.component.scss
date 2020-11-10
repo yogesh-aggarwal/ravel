@@ -1,0 +1,18 @@
+@import "../../../tools";
+
+.container {
+  padding-top: 2rem;
+
+  .title {
+    @include center();
+
+    input {
+      border: none;
+      border-bottom: 2px solid #eee;
+      font-size: 2.5rem;
+      background: none;
+      width: 35%;
+      margin-bottom: 2rem;
+    }
+  }
+}
