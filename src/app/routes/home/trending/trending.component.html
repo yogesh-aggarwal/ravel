@@ -1,1 +1,12 @@
-<p>trending works!</p>
+<ng-container *ngIf="articleIds; else loginContainer">
+  <h1>Trending</h1>
+  <div class="cards">
+    <article-card
+      variant="short"
+      [id]="articleId"
+      *ngFor="let articleId of articleIds"
+    ></article-card>
+  </div>
+</ng-container>
+
+<ng-template #loginContainer> Logging in!! </ng-template>

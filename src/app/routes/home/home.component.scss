@@ -2,5 +2,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 20vw auto 20vw;
+  grid-template-columns: 10vw auto 20vw;
+  grid-gap: 2.5rem;
+  padding: 0 2.5rem;
 }

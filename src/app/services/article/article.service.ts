@@ -96,7 +96,12 @@ export class ArticleService {
     "XgpLPw8DzRO4zFYFmgjt2",
     "XgpLPw8DzRO4zFYFmgjt3",
   ]);
-  trending: BehaviorSubject<string[]> = new BehaviorSubject(null);
+  trending: BehaviorSubject<string[]> = new BehaviorSubject([
+    "8zVNb35IyV6ejDHFWWHt",
+    "XgpLPw8DzRO4zFYFmgjt",
+    "XgpLPw8DzRO4zFYFmgjt2",
+    "XgpLPw8DzRO4zFYFmgjt3",
+  ]);
 
   constructor(private firestore: AngularFirestore) {}
 
