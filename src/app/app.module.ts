@@ -9,7 +9,6 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from "src/environments/environment.prod";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { UserComponent } from "./routes/user/user.component";
-import { CategoriesComponent } from "./routes/home/categories/categories.component";
 import { TrendingComponent } from "./routes/home/trending/trending.component";
 import { PostsComponent } from "./routes/home/posts/posts.component";
 import { ArticleCardComponent } from "./components/article-card/article-card.component";
@@ -26,7 +25,6 @@ import { ContentComponent } from "./components/blog/content/content.component";
     NavbarComponent,
     ArticleComponent,
     UserComponent,
-    CategoriesComponent,
     TrendingComponent,
     PostsComponent,
     ArticleCardComponent,
