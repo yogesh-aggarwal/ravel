@@ -54,6 +54,9 @@ export class UserService {
       following: [],
       dateJoined: new Date(),
       ladoo: 0,
+      profileSections: {},
+      collections: {},
+      about: { bio: "I am a developer!!", businessEmail: "yogesh@gmail.com" },
     };
 
     if (!cloudUser) {

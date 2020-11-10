@@ -71,7 +71,10 @@
     .creations {
       margin-top: 1rem;
       display: grid;
-      grid-template-columns: minmax(15rem, 10vw) auto;
+      grid-template-columns: minmax(15rem, 10vw) minmax(
+          calc(100vw - 15rem - 5rem),
+          calc(100vw - 10vw - 5rem)
+        );
       grid-gap: 2.5rem;
 
       .sidebar {

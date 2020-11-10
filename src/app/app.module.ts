@@ -20,6 +20,7 @@ import { CollectionsComponent } from './routes/user/collections/collections.comp
 import { ExclusivesComponent } from './routes/user/exclusives/exclusives.component';
 import { AboutComponent } from './routes/user/about/about.component';
 import { CollaboratorsComponent } from './routes/user/collaborators/collaborators.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CollaboratorsComponent } from './routes/user/collaborators/collaborator
     ExclusivesComponent,
     AboutComponent,
     CollaboratorsComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,

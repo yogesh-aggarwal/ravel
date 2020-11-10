@@ -1,1 +1,24 @@
-<p>profile works!</p>
+<ng-container *ngIf="user; else loading">
+  <div class="sections">
+    <div
+      class="section"
+      *ngFor="let section of user.profileSections | keyvalue"
+    >
+      <div class="title">
+        <i class="las la-puzzle-piece"></i>
+        <div class="name">
+          {{ section.key }}
+        </div>
+      </div>
+      <div class="cards">
+        <article-card
+          [id]="articleId"
+          *ngFor="let articleId of section.value"
+        ></article-card>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-template #loading>
+  <loading></loading>
+</ng-template>

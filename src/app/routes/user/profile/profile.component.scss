@@ -1,0 +1,34 @@
+@import "../../../../tools";
+
+.sections {
+  .section {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+
+    .title {
+      @include center();
+      justify-content: flex-start;
+      margin-bottom: 1rem;
+
+      i {
+        font-size: 2.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .name {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+
+    .cards {
+      display: flex;
+      @include hide-scrollbar();
+
+      * {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
