@@ -11,6 +11,9 @@ import { AngularFirestore } from "@angular/fire/firestore";
 })
 export class UserService {
   static user: BehaviorSubject<UserInterface> = new BehaviorSubject(null);
+  users: BehaviorSubject<{
+    [key: string]: UserInterface;
+  }> = new BehaviorSubject({});
 
   constructor(
     private auth: AngularFireAuth,
@@ -46,6 +49,9 @@ export class UserService {
       name: user.displayName,
       email: user.email,
       profileImg: user.photoURL,
+      coverImg: "",
+      followers: [],
+      following: [],
       dateJoined: new Date(),
       ladoo: 0,
     };
@@ -67,5 +73,22 @@ export class UserService {
       .subscribe((user) => {
         UserService.user.next(user.payload.data() as UserInterface);
       });
+  }
+
+  async getUser(id: string) {
+    let users = this.users.value;
+    if (users[id]) return;
+
+    const user = await this.firestore
+      .collection("users")
+      .doc(id)
+      .get()
+      .pipe(take(1))
+      .toPromise();
+    users[user.id] = {
+      id: user.id,
+      ...user.data(),
+    } as UserInterface;
+    this.users.next(users);
   }
 }

@@ -4,6 +4,8 @@ export interface UserInterface {
   email: string;
   ladoo: number;
   profileImg: string;
-  // coverImg: string;
+  coverImg: string;
   dateJoined: Date;
+  followers: string[];
+  following: string[];
 }

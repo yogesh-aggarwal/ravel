@@ -1,2 +1,27 @@
-<p>user works!</p>
-{{ id }}
+<div class="container">
+  <!-- <div class="back" (click)="back()">
+    <i class="las la-angle-left"></i>
+  </div> -->
+  <ng-container *ngIf="user">
+    <div class="user">
+      <div class="intro">
+        <div class="cover-img">
+          <img [src]="user.coverImg" alt="" />
+        </div>
+        <div class="info">
+          <div class="profile-img">
+            <img [src]="user.profileImg" alt="" />
+          </div>
+          <div class="about">
+            <div class="name">{{ user.name }}</div>
+            <div class="followings">
+              {{ user.followers.length }} Followers
+              <strong>&</strong>
+              {{ user.following.length }} Following
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
