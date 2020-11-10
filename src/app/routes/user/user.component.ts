@@ -55,6 +55,8 @@ export class UserComponent implements OnInit, OnDestroy {
 
   navigate(route: string) {
     this.currentSection = route;
-    this.router.navigate(["user", this.user.id, route]);
+    !route
+      ? this.router.navigate(["user", this.user.id])
+      : this.router.navigate(["user", this.user.id, route]);
   }
 }
