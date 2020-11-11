@@ -6,6 +6,7 @@ import { BehaviorSubject } from "rxjs";
 })
 export class ModalService {
   isOpen: BehaviorSubject<boolean> = new BehaviorSubject(true);
+  title: BehaviorSubject<string> = new BehaviorSubject("");
 
   constructor() {}
 
@@ -15,5 +16,9 @@ export class ModalService {
 
   closeModal() {
     this.isOpen.next(true);
+  }
+
+  setTitle(title: string) {
+    this.title.next(title);
   }
 }
