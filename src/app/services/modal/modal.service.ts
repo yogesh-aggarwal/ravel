@@ -5,7 +5,7 @@ import { BehaviorSubject } from "rxjs";
   providedIn: "root",
 })
 export class ModalService {
-  isOpen: BehaviorSubject<boolean> = new BehaviorSubject(true);
+  isOpen: BehaviorSubject<boolean> = new BehaviorSubject(false);
   title: BehaviorSubject<string> = new BehaviorSubject("");
 
   constructor() {}

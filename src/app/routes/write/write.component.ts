@@ -139,6 +139,7 @@ export class WriteComponent implements OnInit {
       dateEdited: [new Date()],
     };
 
+    this.modalService.setTitle("Add Tags To Your Article");
     this.modalService.showModal();
     console.log(article);
   }
