@@ -22,6 +22,8 @@ import { AboutComponent } from './routes/user/about/about.component';
 import { CollaboratorsComponent } from './routes/user/collaborators/collaborators.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { WriteComponent } from './routes/write/write.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { WriteComponent } from './routes/write/write.component';
     CollaboratorsComponent,
     LoadingComponent,
     WriteComponent,
+    ModalComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
