@@ -1,0 +1,15 @@
+@import "../../../tools";
+
+.container {
+  @include detach-position();
+  @include full-screen();
+  z-index: 1e3;
+  opacity: 0;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+    backdrop-filter: brightness(90%) blur(3px);
+  }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NotificationService } from "src/app/services/notification/notification.service";
 
 @Component({
   selector: "notification",
@@ -6,7 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./notification.component.scss"],
 })
 export class NotificationComponent implements OnInit {
-  constructor() {}
+  isOpen: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(private notificationService: NotificationService) {}
+
+  ngOnInit(): void {
+    this.notificationService.isOpen.subscribe((isOpen) => {
+      this.isOpen = isOpen;
+    });
+  }
 }

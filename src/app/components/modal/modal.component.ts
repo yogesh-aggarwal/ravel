@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ModalService } from "src/app/services/modal/modal.service";
 
 @Component({
   selector: "modal",
@@ -6,7 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./modal.component.scss"],
 })
 export class ModalComponent implements OnInit {
-  constructor() {}
+  isOpen: boolean = false;
 
-  ngOnInit(): void {}
+  constructor(private modalService: ModalService) {}
+
+  ngOnInit(): void {
+    this.modalService.isOpen.subscribe((isOpen) => {
+      this.isOpen = isOpen;
+    });
+  }
 }

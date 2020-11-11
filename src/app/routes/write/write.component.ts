@@ -4,6 +4,8 @@ import * as Plugins from "./plugins";
 import { Md5 } from "ts-md5/dist/md5";
 import { ArticleInterface } from "src/app/services/article/interfaces";
 import { UserService } from "src/app/services/user/user.service";
+import { NotificationService } from "src/app/services/notification/notification.service";
+import { ModalService } from "src/app/services/modal/modal.service";
 
 @Component({
   selector: "app-write",
@@ -111,7 +113,10 @@ export class WriteComponent implements OnInit {
     },
   });
 
-  constructor() {}
+  constructor(
+    private notificationService: NotificationService,
+    private modalService: ModalService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -133,6 +138,8 @@ export class WriteComponent implements OnInit {
       datePublished: new Date(),
       dateEdited: [new Date()],
     };
+
+    this.modalService.showModal();
     console.log(article);
   }
 }

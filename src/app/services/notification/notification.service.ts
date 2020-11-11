@@ -5,7 +5,15 @@ import { BehaviorSubject } from "rxjs";
   providedIn: "root",
 })
 export class NotificationService {
-  showNotification: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  isOpen: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor() {}
+
+  showNotification() {
+    this.isOpen.next(true);
+  }
+
+  closeNotification() {
+    this.isOpen.next(true);
+  }
 }
