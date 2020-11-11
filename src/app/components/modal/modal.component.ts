@@ -9,6 +9,7 @@ import { ModalService } from "src/app/services/modal/modal.service";
 export class ModalComponent implements OnInit {
   isOpen: boolean = false;
   title: string = "";
+  content: string = "";
 
   constructor(private modalService: ModalService) {}
 
@@ -18,6 +19,9 @@ export class ModalComponent implements OnInit {
     });
     this.modalService.title.subscribe((title) => {
       this.title = title;
+    });
+    this.modalService.content.subscribe((content) => {
+      this.content = content;
     });
   }
 

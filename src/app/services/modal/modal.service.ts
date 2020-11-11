@@ -7,6 +7,7 @@ import { BehaviorSubject } from "rxjs";
 export class ModalService {
   isOpen: BehaviorSubject<boolean> = new BehaviorSubject(false);
   title: BehaviorSubject<string> = new BehaviorSubject("");
+  content: BehaviorSubject<string> = new BehaviorSubject("");
 
   constructor() {}
 
@@ -16,6 +17,10 @@ export class ModalService {
 
   closeModal() {
     this.isOpen.next(true);
+  }
+
+  setContent(content: string) {
+    this.content.next(content);
   }
 
   setTitle(title: string) {

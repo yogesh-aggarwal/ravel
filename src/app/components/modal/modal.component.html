@@ -5,6 +5,6 @@
       <div class="title">{{ title }}</div>
       <icon-button icon="times" (click)="close()"></icon-button>
     </div>
-    <ng-content></ng-content>
+    <div class="content" [innerHTML]="content"></div>
   </main>
 </div>
