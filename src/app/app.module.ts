@@ -24,6 +24,7 @@ import { LoadingComponent } from './components/loading/loading.component';
 import { WriteComponent } from './routes/write/write.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { IconButtonComponent } from './components/icon-button/icon-button.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { NotificationComponent } from './components/notification/notification.co
     WriteComponent,
     ModalComponent,
     NotificationComponent,
+    IconButtonComponent,
   ],
   imports: [
     BrowserModule,

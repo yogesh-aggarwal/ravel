@@ -1,1 +1,8 @@
-<div class="container" [ngClass]="{ show: isOpen }">modalHere!</div>
+<div class="container" [ngClass]="{ show: isOpen }">
+  <main>
+    <div class="actions">
+      <icon-button icon="times" (click)="close()"></icon-button>
+    </div>
+    <ng-content></ng-content>
+  </main>
+</div>

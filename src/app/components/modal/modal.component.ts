@@ -16,4 +16,8 @@ export class ModalComponent implements OnInit {
       this.isOpen = isOpen;
     });
   }
+
+  close() {
+    this.modalService.isOpen.next(false);
+  }
 }

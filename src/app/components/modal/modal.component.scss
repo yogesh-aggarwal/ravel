@@ -1,8 +1,10 @@
 @import "../../../tools";
+@import "../../../theme";
 
 .container {
   @include detach-position();
   @include full-screen();
+  @include center();
   z-index: 1e3;
   opacity: 0;
   pointer-events: none;
@@ -11,5 +13,20 @@
     opacity: 1;
     pointer-events: all;
     backdrop-filter: brightness(90%) blur(3px);
+  }
+
+  main {
+    background: $background;
+    width: 50vw;
+    max-width: 60vw;
+    max-height: 70vh;
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+    .actions {
+      @include center();
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
   }
 }
