@@ -22,7 +22,7 @@ export class WriteComponent implements OnInit {
   editor = getEditor();
 
   constructor(
-    private notificationService: NotificationService,
+    // private notificationService: NotificationService,
     private modalService: ModalService
   ) {}
 
