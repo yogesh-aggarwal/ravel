@@ -12,6 +12,8 @@ import { UserService } from "src/app/services/user/user.service";
 })
 export class WriteComponent implements OnInit {
   currentDate = new Date();
+  title: string = "";
+  shortDesc: string = "";
   editor = new EditorJS({
     holder: "editorjs",
     defaultBlock: "paragraph",
@@ -121,10 +123,10 @@ export class WriteComponent implements OnInit {
     const article: ArticleInterface = {
       id: id,
       authorId: UserService.user.value.id,
-      title: "",
-      shortDesc: "",
-      tags: [],
+      title: this.title,
+      shortDesc: this.shortDesc,
       content: data,
+      tags: [],
       thumbnail: "",
       upvoters: [],
       downvoters: [],

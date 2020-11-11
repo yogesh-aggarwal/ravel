@@ -1,5 +1,6 @@
 <div class="container">
   <div class="actions-wrapper">
+    <div class="thumbnail">Thumbnail</div>
     <div class="actions">
       <div class="date">
         {{ currentDate | date: "dd MMMM yyyy" }}
@@ -11,12 +12,17 @@
     </div>
   </div>
   <div class="title">
-    <input type="text" placeholder="Give Your Article A Title" />
+    <input
+      type="text"
+      placeholder="Give Your Article A Title"
+      (input)="title = $event.target.value"
+    />
   </div>
   <div class="short-desc">
     <textarea
       maxlength="150"
       placeholder="Provide a short desc to attract people"
+      (input)="shortDesc = $event.target.value"
     ></textarea>
   </div>
   <div id="editorjs"></div>
